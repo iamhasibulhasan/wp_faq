@@ -1,0 +1,32 @@
+// Base
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+@import "base/_general.scss";
+@import "base/_typography.scss";
+
+
+// Layout
+@import "layout/_grid.scss";
+@import "layout/_layout.scss";
+@import "layout/_blog.scss";
+@import "layout/_header.scss";
+@import "layout/_footer.scss";
+@import "layout/_spacings.scss";
+@import "layout/_wordpress.scss";
+@import "layout/_block-editor.scss";
+
+
+// Components
+@import "components/_preloader.scss";
+@import "components/_helper-classes.scss";
+@import "components/_icon-fonts.scss";
+@import "components/_elements.scss";
+@import "components/_widgets.scss";
+@import "components/_breadcrumbs.scss";
+@import "components/_newsletter.scss";
+@import "components/_search.scss";
+@import "components/_offcanvas.scss";
+@import "components/cookies-bar.scss";
+
+// Pages
+@import "pages/_page-404.scss";

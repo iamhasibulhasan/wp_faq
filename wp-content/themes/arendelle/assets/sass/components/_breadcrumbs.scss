@@ -1,0 +1,78 @@
+/*-------------------------------------------------------*/
+/* Breadcrumbs
+/*-------------------------------------------------------*/
+.page-title__title + .woocommerce-breadcrumb {
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+.breadcrumbs-wrap {
+	padding: 14px 0;
+	background-color: $bg-light;
+}
+
+.breadcrumbs.breadcrumb-trail {
+	font-weight: normal;
+}
+
+.breadcrumbs .trail-browse,
+.breadcrumbs .trail-items,
+.breadcrumbs .trail-items li {
+	display:     inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin:      0;
+	padding:     0;
+	border:      none;
+	background:  transparent;
+	text-indent: 0;
+}
+
+.breadcrumbs .trail-browse {
+	font-size:   inherit;
+	font-style:  inherit;
+	font-weight: inherit;
+	color:       inherit;
+}
+
+.breadcrumbs .trail-items {
+	list-style: none;
+}
+
+.trail-items li::after,
+.trail-items li::before,
+.woocommerce-breadcrumb__separator {
+	font-family: 'arendelle';
+	font-size: 0.9375rem;
+	padding: 0 0.5em;
+	vertical-align: middle;
+}
+
+.trail-items li::after {
+	content: "\e902";
+}
+
+.trail-items a {
+	color: $heading-color;
+
+	&:hover,
+	&:focus {
+		color: $primary-color;
+		text-decoration: underline;
+	}
+}
+
+.rtl {
+	.trail-items li::after {
+		display: none;
+	}
+
+	.trail-items li::before {
+		content: "\e901";
+	}
+}
+
+.trail-items li:last-of-type::after,
+.trail-items li:last-of-type::before {
+	display: none;
+}

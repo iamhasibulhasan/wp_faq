@@ -1,0 +1,90 @@
+/*-------------------------------------------------------*/
+/* Search
+/*-------------------------------------------------------*/
+.search-form {
+	label {
+		display: flex;
+		margin-bottom: 0;
+		font-family: inherit;
+	}
+}
+
+.arendelle-menu-search {
+
+	&__trigger {
+		display: block;
+		background-color: transparent;
+		color: $nav-links-color;
+		padding: 0;
+		border: 0;
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			color: initial;
+		}
+	}
+
+	&__icon {
+		display: block;
+	}
+
+	&-modal {
+		background-color: transparent;
+		position: fixed;
+		overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		visibility: hidden;
+		opacity: 0;
+		transition: ($transition-all);
+
+		&__inner {
+			background-color: #fff;
+			transition: ($transition-all);
+			transform: scale(1, 0);
+			transform-origin: 100% 0;
+			padding: 40px 0;
+
+			.search-input {
+				margin-bottom: 0;
+				border: 0;
+				outline: 0;
+				border-bottom: 1px solid $border-color;
+				background-color: transparent;
+			}
+		}
+
+		&__close {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 48px;
+			height: 48px;
+			padding: 0;
+			border: 0;
+			text-align: center;
+			background-color: transparent;
+			color: $text-color;
+
+			&:hover,
+			&:focus {
+				background-color: transparent;
+				color: initial;
+			}
+		}
+
+		&--is-open {
+			background-color: rgba(0,0,0,.5);
+			opacity: 1;
+			visibility: visible;
+
+			.arendelle-menu-search-modal__inner {
+				transform: scale(1, 1);
+			}
+		}		
+	}
+}

@@ -1,0 +1,91 @@
+/*
+Theme Name: Arendelle
+Theme URI: https://deothemes.com/freebies/arendelle-free-woocommerce-wordpress-theme/
+Author: DeoThemes
+Author URI: https://deothemes.com
+Description: Arendelle is a gorgeous WooCommerce WordPress theme that suits best for apparel, fashion and clothing store website. The theme comes with a selection of home page layouts, header, footer, mega menu and product builder, custom Elementor widgets topped off with full WooCommerce plugin compatibility. We took care of all the important components such as quickview, wishlist, distraction free checkout and many more. Arendelle WordPress theme is perfectly optimized for mobile devices and loads faster than other themes. Build you next online store with Arendelle WordPress theme.
+Version: 1.0.8
+Tested up to: 5.7
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: arendelle
+Tags: blog, e-commerce, translation-ready, theme-options, grid-layout, left-sidebar, right-sidebar, custom-colors, custom-background, custom-logo, footer-widgets, featured-images, custom-menu, block-styles, wide-blocks
+
+@fs_premium_only /assets/js/cookieconsent.js, /assets/js/cookieconsent.min.js, /assets/js/cookies.js, /includes/customizer/modules/socials.php, /includes/customizer/modules/gdpr.php, /includes/plugins/, /includes/demo-import/, /includes/child-theme/ 
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*-------------------------------------------------------*/
+/* Table of Content
+
+1.General
+  1.1.Typography
+  1.2.Grid
+2.Common Elements
+3.Layout
+4.Blog
+5.Navigation
+6.Footer
+7.Helper CLasses
+8.WordPress styles
+9.Gutenberg
+10.Widgets
+
+/*-------------------------------------------------------*/
+
+/*-------------------------------------------------------*/
+/* Bootstrap Grid
+/*-------------------------------------------------------*/
+@import "_bootstrap.scss";
+
+/*-------------------------------------------------------*/
+/* General
+/*-------------------------------------------------------*/
+::-moz-selection { color: #333; background: #fbedc4; }
+::-webkit-selection { color: #333; background: #fbedc4; }
+::selection { color: #333; background: #fbedc4; }
+
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
+  font-size: 16px;
+  line-height: 1.5;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  background: #fff;
+  outline: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: $text-color;
+
+  img {
+    border: none;
+    max-width: 100%;
+    user-select: none;
+  }
+}
+
+video {
+  width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: 0.8125rem;
+  margin-top: 16px;
+  color: $meta-color;
+  text-align: center;
+}

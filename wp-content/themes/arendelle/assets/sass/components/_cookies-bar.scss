@@ -1,0 +1,59 @@
+/* Cookies notication bar
+-------------------------------------------------------*/
+.cc-container {	
+  padding: 0;
+
+  @include bp-md-up {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.cc-window.cc-banner {
+	background-color: $bg-dark;
+}
+
+.cc-message {
+	margin-right: 20px;
+	flex: 0 1 auto !important;
+	color: #fff;
+	font-weight: 500;
+  font-size: 15px;
+
+  @include bp-md-down {
+    margin-right: 0;
+    margin-bottom: .5em;
+  }
+}
+
+.cc-link {
+	opacity: 1;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}
+
+.cc-link,
+.cc-link:active,
+.cc-link:visited {
+  color: #fff;
+}
+
+a.cc-btn.cc-dismiss {
+  font-size: 0.8125rem !important;
+	background-color: $primary-color;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 14px;
+	border: 0;
+  color: #fff;
+  border-radius: 3px;
+  min-width: auto !important;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+  }
+}

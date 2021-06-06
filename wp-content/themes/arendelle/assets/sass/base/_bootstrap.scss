@@ -1,0 +1,68 @@
+/*!
+ * Bootstrap v5.0.0-beta1 (https://getbootstrap.com/)
+ * Copyright 2011-2020 The Bootstrap Authors
+ * Copyright 2011-2020 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+ */
+
+ :root {
+  --bs-font-monospace: monospace;
+ }
+
+$grid-gutter-width: 20px;
+
+$table-caption-color: $text-color;
+
+$code-font-size: 1.125rem;
+
+$hr-opacity: .4;
+
+$link-color: $primary-color;
+$link-hover-color: $heading-color;
+$link-decoration: none;
+
+$container-max-widths: (
+  // sm: 540px,
+  // md: 720px,
+  lg: 960px,
+  xl: 1260px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1400px
+);
+
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/utilities";
+
+@import "./node_modules/bootstrap/scss/reboot";
+@import "./node_modules/bootstrap/scss/containers";
+@import "./node_modules/bootstrap/scss/grid";
+@import "./node_modules/bootstrap/scss/transitions";
+@import "./node_modules/bootstrap/scss/close";
+@import "./node_modules/bootstrap/scss/modal";
+
+
+// Helpers
+@import "./node_modules/bootstrap/scss/helpers/ratio";
+@import "./node_modules/bootstrap/scss/helpers/visually-hidden";
+
+
+$utilities: (
+  "display": (
+    responsive: true,
+    print: true,
+    property: display,
+    class: d,
+    values: inline inline-block block table table-row table-cell flex inline-flex none
+  )
+);
+
+// Utilities
+@import "./node_modules/bootstrap/scss/utilities/api";

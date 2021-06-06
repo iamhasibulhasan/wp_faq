@@ -1,0 +1,37 @@
+/*-------------------------------------------------------*/
+/* Page 404
+/*-------------------------------------------------------*/
+.page-404 {
+	&-section {
+		padding: 80px 0;
+
+		@include bp-lg-up {
+			padding: 120px 0;
+		}
+		
+	}
+
+	&__title {
+		font-size: 1.7rem;
+	}
+
+	&__text {
+		font-size: 1.125rem;
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include bp-md-up {
+		&__title {
+			font-size: 2.25rem;
+		}
+	}
+
+	&-section .search-form {
+		max-width: 474px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 24px;
+	}
+}

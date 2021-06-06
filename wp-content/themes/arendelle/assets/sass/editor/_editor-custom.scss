@@ -1,0 +1,112 @@
+/*-------------------------------------------------------*/
+/* Editor Custom Styles
+/*-------------------------------------------------------*/
+
+/* Blockquotes
+-------------------------------------------------------*/
+blockquote {
+	margin: 0;
+	overflow: hidden;
+
+	p {
+		font-style: italic;
+	}
+}
+
+.edit-post-visual-editor {
+
+	.wp-block-quote {
+		padding: 12px 40px;
+		border-left: 3px solid $primary-color;	
+
+		&[style*="text-align: left"] {
+			border-left: 3px solid $primary-color;
+		}
+
+		&[style*="text-align: center"] {
+			border: 0;
+		}
+
+		&[style*="text-align: right"] {
+			border-right: 3px solid $primary-color;
+			border-left: 0;
+		}
+	}	
+
+	.wp-block-quote p {
+		color: $heading-color;
+		line-height: $blockquote-text-line-height;
+		font-size: $blockquote-text-font-size;
+		margin-bottom: 5px;
+	}
+
+	.wp-block-quote__citation {
+		font-size: $blockquote-citation-font-size;
+		font-style: normal;
+		color: $meta-color;
+		opacity: 0.7;
+	}
+
+	// Large
+	.wp-block-quote.is-large p,
+	.wp-block-quote.is-style-large p {
+		font-size: $blockquote-text-font-size--large;
+	}
+
+	.wp-block-quote.is-style-large .wp-block-quote__citation,
+	.wp-block-quote.is-large .wp-block-quote__citation {
+		font-size: $blockquote-citation-font-size--large;
+	}
+
+}
+
+
+/* Pullquotes
+-------------------------------------------------------*/
+.wp-block-pullquote {
+	position: relative;
+	border: 0;
+	text-align: left;
+	color: $heading-color;
+	margin-top: 0;
+	padding: .2em 1em .2em 2.5em;
+
+	blockquote p {
+		margin-bottom: 0;
+		font-style: italic;
+	}
+
+	[data-align=left] &,
+	[data-align=right] & {
+		font-size: 1rem;
+	}
+
+	&::before {
+		content: '“';
+		color: $primary-color;
+		left: 0;
+		top: 0;
+		position: absolute;
+		font-size: 5rem;
+		line-height: 1;
+	}
+
+	.wp-block-pullquote__citation {
+		text-transform: none;
+		opacity: 0.7;
+		font-style: normal;
+		font-size: $blockquote-citation-font-size;
+		margin-top: 1em;
+	}
+
+	// Solid
+	&.is-style-solid-color {
+		margin-top: 10px;
+		padding: 40px 0;
+
+		&::before {
+			left: 10px;
+			top: 10px;
+		}
+	}	
+} 

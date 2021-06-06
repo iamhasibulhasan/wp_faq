@@ -1,0 +1,201 @@
+/*-------------------------------------------------------*/
+/* Helper Classes
+/*-------------------------------------------------------*/
+.clearfix { *zoom: 1; }
+.clearfix:before, .clearfix:after { display: table; line-height: 0; content: ""; }
+.clearfix:after { clear: both; }
+.clear { clear: both; }
+.oh { overflow: hidden; }
+.relative { position: relative; }
+.img-fullwidth { width: 100%; }
+.uppercase { text-transform: uppercase; letter-spacing: 0.04em; }
+.nocaps { text-transform: none; letter-spacing: 0; }
+.bg-light { background-color: $bg-light; }
+.bg-dark { background-color: $bg-dark; }
+
+/* Gradients / Overlays
+-------------------------------------------------------*/
+.bg-overlay:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba( $bg-dark, .37 );
+  @include transition( $transition-all );
+}
+
+.bottom-gradient {
+  position: relative;  
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    @include linear-gradient-from-bottom(rgba($bg-dark, .70), transparent);
+  }
+}
+
+
+
+/* Box Shadow
+-------------------------------------------------------*/
+.box-shadow {
+  box-shadow: 0px 10px 27px 0px rgba( #9aa1ab, .18 );
+  @include transition ($transition-all);
+  position: relative;
+  display: block;
+  top: 0;
+}
+
+
+/* Title Underline
+-------------------------------------------------------*/
+.title-underline {
+  a {
+    background-image: linear-gradient(to right, $heading-color 0%, $heading-color 100%);
+    background-size: 0px 2px;
+    background-position: 0px 95%;
+    background-repeat: no-repeat;
+    transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+    padding: 0.5% 0px;
+  }
+
+  &:hover a {
+    background-size: 100% 2px;
+  }
+}
+
+
+/* Link Underline
+-------------------------------------------------------*/
+.link-underline {
+  position: relative;
+  @include transition( $transition-all );
+
+  &:after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    background-color: $primary-color;
+    height: 2px;
+    width: 62px;
+    left: 0;
+    bottom: -8px;
+    @include transition( $transition-all );  
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary-color;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+
+/*-------------------------------------------------------*/
+/* Hovers
+/*-------------------------------------------------------*/
+.hover-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba( $bg-dark, .5 );
+  @include transition ( .3s cubic-bezier( 0.43, 0.07, 0.61, 0.95 ) );
+}
+
+.hover-trigger:hover .hover-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-shine {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+  }
+
+  &:hover {
+    &::before {
+      -webkit-animation: shine .75s;
+      animation: shine .75s;
+    }
+  }  
+}
+
+.hover-zoom {
+  overflow: hidden;
+  position: relative;
+  @include transition ( transform .3s cubic-bezier( 0.43, 0.07, 0.61, 0.95 ) );
+
+  img {
+    @include transition ( transform .3s cubic-bezier( 0.43, 0.07, 0.61, 0.95 ) );
+  }
+
+  &:hover {
+    transform: scale(.9);
+
+    img {
+      transform: scale( 1.2 );
+    }
+  }
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+
+/* Flexbox
+-------------------------------------------------------*/
+.justify-content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.justify-content-between {
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

@@ -1,0 +1,99 @@
+/*-------------------------------------------------------*/
+/* Grid
+/*-------------------------------------------------------*/
+.container {
+  // @include bp-xl-up {
+  //   max-width: $container-width;
+  // }
+
+  @include bp-lg-down {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.container-semi-fluid {
+  padding: 0 50px;
+
+  @include bp-md-down {
+    padding: 0 15px;
+  }
+}
+
+
+/* Sections
+-------------------------------------------------------*/
+.blog-section,
+.search-results-section,
+.archive-section,
+.page-section,
+.shop-section {
+  padding: 70px 0;
+}
+
+.single-product .shop-section {
+  padding-bottom: 30px;
+}
+
+
+/* Vertical Header
+-------------------------------------------------------*/
+.eversor-header-vertical {
+
+  @include bp-lg-up {
+    .container {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+  
+}
+
+
+/* Flexbox
+-------------------------------------------------------*/
+.flex-parent {
+  @include display-flex;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+.flex-child {
+  @include flex (1 0 0);
+}
+
+
+/* Row Gutters
+-------------------------------------------------------*/
+.row-8 {
+  margin: 0 -4px;
+
+  & > div {
+    padding: 0 4px;
+  }
+}
+
+.row-10 {
+  margin: 0 -5px;
+
+  & > div {
+    padding: 0 5px;
+  }
+}
+
+.row-16 {
+  margin: 0 -8px;
+
+  & > div {
+    padding: 0 8px;
+  }
+}
+
+.row-40 {
+  margin: 0 -20px;
+
+  & > div {
+    padding: 0 20px;
+  }
+}

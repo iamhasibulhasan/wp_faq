@@ -1,0 +1,140 @@
+/*-------------------------------------------------------*/
+/* Footer
+/*-------------------------------------------------------*/
+.footer {
+  background-color: $bg-light;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__widgets {
+    padding: 100px 0 40px;
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+
+/* Footer Menu Bar
+-------------------------------------------------------*/
+.footer__menu-bar {
+  padding: 32px 0;
+  border-bottom: 1px solid $border-color-dark;
+}
+
+.footer__nav-menu { 
+
+  li {
+    display: inline-block;
+    margin-right: 24px;
+    line-height: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include bp-md-down {    
+    .footer & {
+      margin-bottom: 18px;
+    }
+
+    li {
+      display: block;
+    }
+  }
+}
+
+
+/* Footer Socials
+-------------------------------------------------------*/
+.footer__socials {
+  @include bp-md-up {
+    text-align: right;
+
+    .social {
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+
+/* Footer Colors
+-------------------------------------------------------*/
+.footer {
+  .elementor-widget-wp-widget-recent-posts a,
+  .widget_recent_entries a,
+  .elementor-widget-wp-widget-nav_menu a,
+  .widget_nav_menu a,
+  .elementor-widget-wp-widget-categories a,
+  .widget_categories a,
+  .elementor-widget-wp-widget-pages a,
+  .widget_pages a,
+  .elementor-widget-wp-widget-pages-archives a,
+  .widget_archive a,
+  .elementor-widget-wp-widget-meta a,
+  .widget_meta a,
+  p,
+  &__widgets,
+  .calendar_wrap caption {
+    color: $text-color;
+  }
+}
+
+
+/* Footer Widgets
+-------------------------------------------------------*/
+.footer__widgets {
+
+  .widget_recent_comments a,
+  #wp-calendar thead th,
+  .widget_tag_cloud a {
+    color: $text-color;
+  }
+
+  .widget_categories li,
+  .widget_pages li,
+  .widget_archive li,
+  .widget_meta li,
+  .widget_nav_menu li {
+    padding: 3px 0;
+    border: 0 !important;
+  }
+
+  .widget .sub-menu li:first-child,
+  .widget .children li:first-child {
+    padding-top: 0;
+  }
+}
+
+
+/* Bottom Footer
+-------------------------------------------------------*/
+.footer__bottom {
+  padding: 27px 0;
+  font-size: 0.875rem;
+
+  a {
+    color: $text-color;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  } 
+}
+
+
+.footer__payment-icons {
+  display: flex;
+  justify-content: flex-end;
+
+  &-item svg {
+    height: 34px;
+    margin-left: 8px;
+    opacity: .5;
+  }
+}

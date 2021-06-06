@@ -1,0 +1,409 @@
+/*-------------------------------------------------------*/
+/* Widgets
+/*-------------------------------------------------------*/
+.widget {
+
+  a {
+    color: $text-color;
+
+    &:hover,
+    &:focus {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+
+  .footer &,
+  .sidebar &,
+  .elementor-widget-sidebar & {
+    margin-bottom: 48px;
+  }
+  
+  li {
+    list-style: none;
+  }
+
+  &-title {
+    font-size: 1.125rem;
+    color: $heading-color;
+    margin-bottom: 20px;
+  }
+
+  .sub-menu,
+  .children {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+.menu-item {
+  list-style: none;
+}
+
+.elementor-widget-sidebar .widget-title,
+.sidebar .widget-title {
+  font-size: 1.125rem;
+}
+
+
+/* Recent Entries, Comments
+----------------------------------------------------------------*/
+.elementor-widget-wp-widget-recent-posts li,
+.widget_recent_entries li,
+.elementor-widget-wp-widget-recent-comments li,
+.widget_recent_comments li {
+  padding: 10px 0;
+  border-bottom: 1px solid $border-color;
+  font-family: $heading-font;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.elementor-widget-wp-widget-recent-posts,
+.widget_recent_entries {
+  .post-date {
+    display: block;
+    font-size: 0.8125rem;
+    color: lighten( $text-color, 30% );
+  }
+}
+
+
+/* Archives / Categories / Pages / Nav Menu / Meta
+-------------------------------------------------------*/
+.elementor-widget-wp-widget-pages-archives li,
+.widget_archive li,
+.elementor-widget-categories li,
+.widget_categories li,
+.elementor-widget-wp-widget-pages li,
+.widget_pages li,
+.elementor-widget-wp-widget-nav_menu li,
+.widget_nav_menu li,
+.elementor-widget-wp-widget-meta li,
+.widget_meta li {
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-size: 0.8125rem;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+
+/* Widget RSS
+-------------------------------------------------------*/
+.widget_rss {
+  li {
+    padding: 16px 0;
+    border-bottom: 1px solid $border-color;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  .rsswidget {
+    color: $heading-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .rss-date {
+    display: block;
+    color: $meta-color;
+    font-size: 0.875rem;
+    margin: 6px 0 12px;
+  }
+
+  .rssSummary {
+    margin-bottom: 8px;
+
+    & + cite {
+      font-size: 15px;
+      color: $meta-color;
+    }
+  }
+
+  .widget-title .rsswidget:last-child {
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: 2px;
+    display: inline-block;
+  }
+}
+
+
+/* Widgets select (Categories, Archives, Text Widget)
+-------------------------------------------------------*/
+.widget_categories,
+.widget_archive,
+.widget_text {  
+  select {
+    margin-bottom: 0;
+  }
+}
+
+
+/* Widget Calendar
+-------------------------------------------------------*/
+.calendar_wrap {
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td,
+  span {
+    display: table-cell;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 1;
+    text-align: center;
+  }
+
+  caption {
+    caption-side: top;
+    text-align: center;
+    background-color: $bg-light;
+    padding: 2% 2.5%;
+    margin-bottom: 0;
+    border: 1px solid $border-color;
+    border-bottom: 0;
+    font-weight: 500;
+  }
+
+  .pad {
+    background: none;
+  }
+
+  .wp-calendar-nav {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      flex: 1;
+    }
+  }
+
+  tfoot #prev,
+  .wp-calendar-nav-prev {
+    text-align: left;
+  }
+
+  tfoot #next,
+  .wp-calendar-nav-next {
+    text-align: right;
+  }
+
+}
+
+/* Widget Profile
+-------------------------------------------------------*/
+.widget-profile {
+  background-color: $bg-light;
+  padding: 32px;
+
+  &__img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__author-name {
+    font-size: 1.3125rem;
+  }
+
+  &__description {
+    margin-top: 10px;
+    margin-bottom: 24px;
+  }
+}
+
+/* Widget Popular Posts
+-------------------------------------------------------*/
+.widget-popular-posts {
+
+  &__list > li {
+    padding: 10px 0;
+    border-bottom: 1px solid $border-color;
+
+    &:first-child {
+      padding-top: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__article {
+    display: flex;
+  }
+
+  &__img-holder {
+    flex: 0 0 50px;
+    max-width: 50px; 
+    position: relative;
+    margin-left: auto;
+
+    @include bp-sm-up {
+      flex: 0 0 65px;
+      max-width: 65px;
+    }
+  }
+
+  &__entry {
+    min-height: 60px;
+  }
+
+  &__number {
+    font-size: 0.9375rem;
+    font-family: $heading-font;
+    font-weight: 500;
+    margin-right: 16px;
+  }
+
+  &__entry-title {
+    font-size: 0.9375rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    margin-right: 15px;
+
+    a {
+      color: $heading-color;
+    }
+
+    a:hover {
+      color: $primary-color;
+    }
+  }
+}
+
+
+/* Widget Newsletter 
+-------------------------------------------------------*/
+.sidebar .widget_mc4wp_form_widget {
+  border: 1px solid $border-color;
+  padding: 28px 24px;
+}
+
+.mc4wp-form-fields {
+  position: relative;
+
+  input[type=email],
+  input[type=text] {
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  input[type=submit] {
+    margin-bottom: 0;
+    width: auto;
+  }
+}
+
+
+/* Widget Info
+-------------------------------------------------------*/
+.widget-info {
+  &__item:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    font-size: 0.8125rem;
+  }
+}
+
+
+/* Widget Search
+-------------------------------------------------------*/
+.widget.widget_search,
+.widget.widget_product_search {
+  padding: 0;
+  border: 0;
+}
+
+.widget_search .search-input {
+  margin: 0;
+}
+
+input.search-input {
+  font-weight: normal;
+}
+
+.widget-search-button,
+.search-form__button,
+.search-button,
+.woocommerce-product-search button[type=submit] {
+  font-family: 'arendelle';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 !important;
+  box-shadow: none;
+  background-color: transparent !important;
+  color: $text-color;
+  border: 0;  
+  vertical-align: middle;  
+
+  &:focus {
+    background-color: inherit;
+    color: inherit;
+  }
+}
+
+.search-form {
+  position: relative;
+
+  .widget-search-button,
+  .search-form__button,
+  .search-button,
+  .woocommerce-product-search button[type=submit] {
+    border-radius: 0;
+    font-size: 1.25rem;
+  }
+}
+
+
+/* Widget Tags / Entry Tags
+-------------------------------------------------------*/
+.widget_tag_cloud .tagcloud a,
+.entry__tags a,
+.widget_product_tag_cloud a {
+  line-height: 1;
+  margin: 0 8px 8px 0;
+  padding: 8px 12px;
+  font-size: 1rem !important;
+  border: 1px solid $border-color;
+  color: $text-color;
+  float: left;
+  @include transition( all 0.1s ease-in-out );
+
+  &:hover {
+    text-decoration: none;
+    background-color: $primary-color;
+    border-color: transparent;
+    color: #fff;
+  }
+}
+
+.tagcloud {
+  overflow: hidden;
+}

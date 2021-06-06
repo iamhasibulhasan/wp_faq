@@ -1,0 +1,25 @@
+/* CSS Styles for WP Customizer */
+#customize-controls .customizer-title {
+	font-size: 1rem;
+	background-color: #fff;
+	padding: 14px;
+	margin: 12px -12px 2px;
+	box-shadow: 0 1px 3px #d6d6d678;
+}
+
+.customize-control-kirki-radio-image > .image {
+	margin-left: -4px;
+	margin-right: -4px;
+}
+
+.customize-control-kirki-radio-image > .image > label {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 33.33333%;
+	flex: 0 0 33.33333%;
+	max-width: 33.33333%;
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 1px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
